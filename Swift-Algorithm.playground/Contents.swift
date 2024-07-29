@@ -1,7 +1,16 @@
 import Foundation
 
-let testArray = [1, 3, 9, 11, 15, 19, 29]
-let testVal1 = 25
-let testVal2 = 15
-print(binarySearch(testArray, value: testVal1))
-binarySearch(testArray, value: testVal2)
+// Test cases
+// Set up tree
+let tree = BinaryTree(rootValue: 1)
+tree.root.left = BinaryTreeNode(value: 2)
+tree.root.right = BinaryTreeNode(value: 3)
+tree.root.left?.left = BinaryTreeNode(value: 4)
+tree.root.left?.right = BinaryTreeNode(value: 5)
+
+// Test search
+print(tree.search(4)) // Should be true
+print(tree.search(6)) // Should be false
+
+// Test printTree
+print(tree.printTree()) // Should be 1-2-4-5-3
