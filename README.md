@@ -1,1 +1,2 @@
-Swift Algorithms
+# Swift Algorithms
+Data Structure & Algorithms in Swift
