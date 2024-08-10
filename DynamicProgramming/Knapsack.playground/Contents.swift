@@ -10,5 +10,10 @@ KnapsackRecursive().calculate(weight: weight, value: value, capacity: capacity, 
 
 //knapsack via Memoization
 var dpArray: [[Int]] = Array(repeating: [Int](repeating: -1, count: capacity+1), count: weight.count+1)
-var obj = KnapsackMemoization(dp: dpArray)
-obj.calculate(weight: weight, value: value, capacity: capacity, size: weight.count)
+var knapsackMemoization = KnapsackMemoization(dp: dpArray)
+knapsackMemoization.calculate(weight: weight, value: value, capacity: capacity, size: weight.count)
+
+//knapsack via top-down approach
+var dpArray2: [[Int]] = Array(repeating: [Int](repeating: 0, count: capacity+1), count: weight.count+1)
+var knapsackTopDown = KnapsackTopDown(dp: dpArray2)
+knapsackTopDown.calculate(weight: weight, value: value, capacity: capacity, size: weight.count)
