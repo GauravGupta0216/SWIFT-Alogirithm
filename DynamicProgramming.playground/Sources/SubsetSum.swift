@@ -1,3 +1,8 @@
+/*
+    Given a set of non-negative integers and a value sum.
+    Task is to check if there is a subset of the given set whose sum is equal to the given sum.
+*/
+
 import Foundation
 
 public struct SubsetSumRecursive {
@@ -32,10 +37,14 @@ public struct SubsetSumTopDown {
 
     public func isSubsetSum() -> Bool {
         if sum == 0 { return true }
+        
+        //inititalization
         var dp: [[Bool]] = Array(repeating: [Bool](repeating: false, count: sum+1), count: input.count+1)
         for i in 0...size {
             dp[i][0] = true
         }
+        
+        //Calculate via top-down
         for i in 1...size {
             for j in 1...sum {
                 if input[i - 1] <= j {

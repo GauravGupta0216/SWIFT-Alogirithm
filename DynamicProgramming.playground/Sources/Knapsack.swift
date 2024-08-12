@@ -1,3 +1,8 @@
+/*
+    Given N items where each item has some weight and profit associated with it and also given a bag with capacity W.
+    The task is to put the items into the bag such that the sum of profits associated with them is the maximum possible.
+*/
+
 import Foundation
 
 public struct KnapsackRecursive {
