@@ -2,7 +2,7 @@ import Foundation
 
 public class BST {
 
-    var root: BinaryTreeNode
+    public var root: BinaryTreeNode
 
     public init(value: Int) {
         self.root = BinaryTreeNode(value: value)

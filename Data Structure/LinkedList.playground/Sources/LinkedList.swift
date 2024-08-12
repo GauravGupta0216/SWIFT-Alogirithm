@@ -1,5 +1,7 @@
 import Foundation
 
+import Foundation
+
 public class Node {
     public var value: Int
     public var next: Node?
