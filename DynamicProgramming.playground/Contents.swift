@@ -1,5 +1,7 @@
 import Foundation
 
+var input: [Int] = [2, 3, 7, 8, 10]
+
 /*
  //Knapsack Tests
 let weight: [Int] = [1, 3, 4, 5]
@@ -23,7 +25,6 @@ knapsackTopDown.calculate(weight: weight, value: value, capacity: capacity, size
 
 /*
  //Subset Sum tests
-let input: [Int] = [2, 3, 7, 8, 10]
 var sum = 11
 let size = input.count
 
@@ -42,9 +43,20 @@ print(SubsetSumTopDown(input: input, sum: 0).isSubsetSum()) //Should print true
 
 /*
 //Equal Sum Tests
-var input: [Int] = [1, 5, 1, 7]
+input: [Int] = [1, 5, 1, 7]
 print(EqualSumPartition(input: input).isEqualSumPartitionPossible()) //Should print true
 
 input = [0]
 print(EqualSumPartition(input: input).isEqualSumPartitionPossible()) //Should print false
+*/
+
+/*
+//Subset count with equal sum test
+input = [3, 5, 8, 11, 6]
+let obj = SubsetCount(input)
+print(obj.countEqualSumSubset(11))
+print(obj.countEqualSumSubset(9))
+print(obj.countEqualSumSubset(0))
+print(obj.countEqualSumSubset(8))
+print(obj.countEqualSumSubset(41))
 */
