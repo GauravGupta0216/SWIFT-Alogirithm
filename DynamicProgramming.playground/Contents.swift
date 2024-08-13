@@ -60,3 +60,12 @@ print(obj.countEqualSumSubset(0))
 print(obj.countEqualSumSubset(8))
 print(obj.countEqualSumSubset(41))
 */
+
+
+//Minimum subset sum difference
+input = [1, 6, 11, 5]
+print(MinSubsetSumDiff(input: input).findMinimumSubsetSumDifference())
+
+input = [1, 8, 7]
+print(MinSubsetSumDiff(input: input).findMinimumSubsetSumDifference())
+
