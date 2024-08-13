@@ -1,9 +1,9 @@
 import Foundation
 
 //Knapsack Tests
-let weight: [Int] = [1, 3, 4, 5]
-let value: [Int] = [1, 4, 5, 7]
-let capacity: Int = 7
+var weight: [Int] = [1, 3, 4, 5]
+var value: [Int] = [1, 4, 5, 7]
+var capacity: Int = 7
 
 //Knapsack via Recursion
 KnapsackRecursive().calculate(weight: weight, value: value, capacity: capacity, size: weight.count)
@@ -71,3 +71,16 @@ print(MinSubsetSumDiff(input: input).findMinimumSubsetSumDifference())  //print 
 //Subset count with given difference
 input = [1, 1, 2, 3]
 print(SubsetCountWithGivenDiff(input).count(1)) //print 3
+
+
+//Unbounded Knapsack
+value = [1, 30]
+weight = [1, 50]
+capacity = 100
+print(UnboundedKnapsack(value, weight, capacity).calculate()) //print 100
+
+value = [10, 40, 50, 70]
+weight = [1, 3, 4, 5]
+capacity = 8
+print(UnboundedKnapsack(value, weight, capacity).calculate()) //print 110
+
