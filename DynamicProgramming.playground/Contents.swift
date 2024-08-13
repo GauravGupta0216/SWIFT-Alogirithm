@@ -1,6 +1,5 @@
 import Foundation
 
-/*
 //Knapsack Tests
 let weight: [Int] = [1, 3, 4, 5]
 let value: [Int] = [1, 4, 5, 7]
@@ -67,4 +66,8 @@ print(MinSubsetSumDiff(input: input).findMinimumSubsetSumDifference())  //print 
 
 input = [1, 8, 7]
 print(MinSubsetSumDiff(input: input).findMinimumSubsetSumDifference())  //print 0
-*/
+
+
+//Subset count with given difference
+input = [1, 1, 2, 3]
+print(SubsetCountWithGivenDiff(input).count(1)) //print 3
