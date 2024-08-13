@@ -19,13 +19,11 @@ public struct MinSubsetSumDiff {
         
         //Initialization of DP matrix
         var dp = Array(repeating: [Bool](repeating: false, count: rangeOfS1 + 1), count: size+1)
-        for i in 0...size {
-            dp[i][0] = true
-        }
+        dp[0][0] = true
         
         //Calculate dp matrix value
         for i in 1...size {
-            for j in 1...rangeOfS1 {
+            for j in 0...rangeOfS1 {
                 if input[i-1] <= j {
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-input[i-1]]
                 } else {

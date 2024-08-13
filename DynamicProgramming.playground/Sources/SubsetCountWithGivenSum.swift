@@ -15,18 +15,13 @@ public struct SubsetCount {
     }
     
     public func countEqualSumSubset(_ x: Int) -> Int {
-        //Edge case
-        if x == 0 { return 1 }
-
         //Initialization
         var dp = Array(repeating: [Int](repeating: 0, count: x+1), count: size+1)
-        for i in 0...size {
-            dp[i][0] = 1
-        }
-        
+        dp[0][0] = 1
+
         //Calculate count via top-down approach
         for i in 1...size {
-            for j in 1...x {
+            for j in 0...x {
                 if input[i-1] <= j {
                     dp[i][j] = dp[i-1][j] + dp[i-1][j-input[i-1]]
                 } else {

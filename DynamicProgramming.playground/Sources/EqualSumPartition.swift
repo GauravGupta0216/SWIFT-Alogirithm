@@ -36,13 +36,11 @@ public struct EqualSumPartition {
         //inititalization
         let value = sum/2
         var dp: [[Bool]] = Array(repeating: [Bool](repeating: false, count: value+1), count:size+1)
-        for i in 0...size {
-            dp[i][0] = true
-        }
+        dp[0][0] = true
         
         //Calculate top-down matrix
         for i in 1...size {
-            for j in 1...value {
+            for j in 0...value {
                 if input[i-1] <= j {
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-input[i-1]]
                 } else {

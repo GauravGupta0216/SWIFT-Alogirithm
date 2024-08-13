@@ -36,17 +36,13 @@ public struct SubsetSumTopDown {
     }
 
     public func isSubsetSum() -> Bool {
-        if sum == 0 { return true }
-        
         //inititalization
         var dp: [[Bool]] = Array(repeating: [Bool](repeating: false, count: sum+1), count: input.count+1)
-        for i in 0...size {
-            dp[i][0] = true
-        }
+        dp[0][0] = true
         
         //Calculate via top-down
         for i in 1...size {
-            for j in 1...sum {
+            for j in 0...sum {
                 if input[i - 1] <= j {
                     dp[i][j] = dp[i-1][j-input[i-1]] || dp[i-1][j]
                 } else {
