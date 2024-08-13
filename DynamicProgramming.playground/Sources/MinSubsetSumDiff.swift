@@ -1,3 +1,5 @@
+// Varition of 0/1 Knapsack
+
 /*
     Given a set of integers, the task is to divide it into two sets S1 and S2 such that the absolute difference between their sums is minimum.
 */

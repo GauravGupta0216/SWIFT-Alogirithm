@@ -1,3 +1,5 @@
+// Varition of 0/1 Knapsack
+
 /*
     Given an array input[] of length N and an integer x.
     Task is to find the number of subsets with a sum equal to x.

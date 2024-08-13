@@ -1,3 +1,5 @@
+// Varition of 0/1 Knapsack
+
 /*
     Given an array input[] of size N and a given difference diff.
     Task is to count the number of partitions that we can perform such that the difference between
