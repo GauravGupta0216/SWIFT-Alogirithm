@@ -84,3 +84,15 @@ weight = [1, 3, 4, 5]
 capacity = 8
 print(UnboundedKnapsack(value, weight, capacity).calculate()) //print 110
 
+//Coin change - task 1
+var coins = [1,2,3]
+print(CoinChange(coins).calculateNumOfCombination(4)) //print 4
+
+coins = [2, 5, 3, 6]
+print(CoinChange(coins).calculateNumOfCombination(10)) //print 5
+
+coins = [10]
+print(CoinChange(coins).calculateNumOfCombination(10)) //print 1
+
+coins = [4]
+print(CoinChange(coins).calculateNumOfCombination(5)) //print 0
