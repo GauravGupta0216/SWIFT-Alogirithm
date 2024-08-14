@@ -39,8 +39,40 @@ public struct CoinChange {
                 }
             }
         }
-
+        
         return dp[size][sum]
+    }
+    
+    //DP via Bottom-up Approach
+    public func minNumOfCoins(_ sum: Int) -> Int {
+        if sum == 0 { return -1 }
+        
+        let size = coins.count
+
+        // table[i] will be storing the minimum number of coins
+        // required for i value.  So table[sum] will have result
+        var dp = Array(repeating: Int.max, count: sum+1)
+        dp[0] = 0
+        
+        // Compute minimum coins required for all
+        // values from 1 to sum
+        for i in 1...sum {
+            // Go through all coins smaller than i
+            for j in 0..<size {
+                if (coins[j] <= i) {
+                    let sub_res = dp[i - coins[j]]
+                    if sub_res != Int.max && sub_res + 1 < dp[i] {
+                        dp[i] = sub_res + 1
+                    }
+                }
+            }
+        }
+
+        if dp[sum] == Int.max {
+            return -1
+        }
+        
+        return dp[sum];
     }
 }
 

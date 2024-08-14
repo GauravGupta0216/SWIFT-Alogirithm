@@ -96,3 +96,8 @@ print(CoinChange(coins).calculateNumOfCombination(10)) //print 1
 
 coins = [4]
 print(CoinChange(coins).calculateNumOfCombination(5)) //print 0
+
+
+//Coin change - task 2
+coins = [9, 6, 5, 3]
+print(CoinChange(coins).minNumOfCoins(11)) //print 2
