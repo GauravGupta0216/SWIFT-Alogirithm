@@ -101,3 +101,12 @@ print(CoinChange(coins).calculateNumOfCombination(5)) //print 0
 //Coin change - task 2
 coins = [9, 6, 5, 3]
 print(CoinChange(coins).minNumOfCoins(11)) //print 2
+
+
+// LCS
+var s1 = "abcdefgh"
+var s2 = "bcdghi"
+let lcs = LCS(s1, s2)
+print(lcs.getLCSViaRecursion())     //Print 5
+print(lcs.getLCSViaMemoization())   //Print 5
+print(lcs.getLCSViaTopDown())       //Print 5
