@@ -114,3 +114,9 @@ print(lcs.getLCSString())
 
 /// Longest Common Substring
 print(LongestCommonSubstring(s1, s2).calculate()) //print 3 - bcd
+
+
+/// Shortest Common Subsequence
+s1 = "AGGTAB"
+s2 = "GXTXAYB"
+print(ShortestCommonSuperSequence(s1, s2).getLength()) // Print 9
