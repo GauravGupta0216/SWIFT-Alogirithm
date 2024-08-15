@@ -1,6 +1,6 @@
 import Foundation
 
-public struct LCS {
+public struct LongestCommonSubsequence {
     public let s1: String
     public let s2: String
     

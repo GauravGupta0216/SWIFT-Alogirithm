@@ -103,10 +103,13 @@ coins = [9, 6, 5, 3]
 print(CoinChange(coins).minNumOfCoins(11)) //print 2
 
 
-// LCS
+/// Longest Common Subsequence
 var s1 = "abcdefgh"
 var s2 = "bcdghi"
-let lcs = LCS(s1, s2)
-print(lcs.getLCSViaRecursion())     //Print 5
+let lcs = LongestCommonSubsequence(s1, s2)
+print(lcs.getLCSViaRecursion())     //Print 5 - bcdgh
 print(lcs.getLCSViaMemoization())   //Print 5
 print(lcs.getLCSViaTopDown())       //Print 5
+
+/// Longest Common Substring
+print(LongestCommonSubstring(s1, s2).calculate()) //print 3 - bcd
