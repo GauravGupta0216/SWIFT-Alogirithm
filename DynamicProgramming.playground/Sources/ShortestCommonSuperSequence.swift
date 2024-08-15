@@ -1,3 +1,8 @@
+/*
+    Given two strings "s1" and "s2".
+    Task is to find the length of the shortest string that has both str1 and str2 as subsequences.
+*/
+
 import Foundation
 
 public struct ShortestCommonSuperSequence {

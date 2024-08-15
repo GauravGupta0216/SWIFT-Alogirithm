@@ -1,3 +1,7 @@
+/*
+    Given two strings "s1" and "s2", find the length of the longest common substring.
+*/
+
 import Foundation
 
 public struct LongestCommonSubstring {
