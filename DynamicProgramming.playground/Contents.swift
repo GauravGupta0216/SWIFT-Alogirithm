@@ -120,6 +120,7 @@ print(LongestCommonSubstring(s1, s2).calculate()) //print 3 - bcd
 s1 = "AGGTAB"
 s2 = "GXTXAYB"
 print(ShortestCommonSuperSequence(s1, s2).getLength()) // Print 9
+print(ShortestCommonSuperSequence(s1, s2).printSCS()) // Print 9
 
 
 /// Longest Palindromic Subsequence
