@@ -126,3 +126,7 @@ print(ShortestCommonSuperSequence(s1, s2).printSCS()) // Print 9
 /// Longest Palindromic Subsequence
 s1 = "AGBCBA"
 print(LongestPalindromicSubsequence(s1).getLength()) // Print 5 - ABCBA
+
+/// Longest Repeating Subsequence
+s1 = "axxzxy"
+print(LongestRepeatingSubsequence(s1).getLRS())
