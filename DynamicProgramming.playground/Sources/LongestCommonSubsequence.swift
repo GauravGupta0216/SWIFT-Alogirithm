@@ -72,4 +72,45 @@ public struct LongestCommonSubsequence {
         
         return dp[m][n]
     }
+    
+    /// Print Longest Common Subsequence via TopDown Approach
+    public func getLCSString() -> String {
+        //Initialization
+        let m = s1.count
+        let n = s2.count
+        let arrS1 = Array(s1)
+        let arrS2 = Array(s2)
+        var dp = Array(repeating: [Int](repeating: 0, count: n+1), count: m+1)
+        
+        // Calculate DP Matrix
+        for i in 1...m {
+            for j in 1...n {
+                if arrS1[i-1] == arrS2[j-1] {
+                    dp[i][j] = 1 + dp[i-1][j-1]
+                } else {
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+                }
+            }
+        }
+
+        // Code to print LCS
+        var i = m
+        var j = n
+        var index = dp[m][n]
+        var resultArr = [Character](repeating: "\0", count: index)
+        while i > 0 && j > 0 {
+            if arrS1[i-1] == arrS2[j-1] {
+                resultArr[index-1] = arrS1[i-1]
+                i -= 1
+                j -= 1
+                index -= 1
+            } else if dp[i-1][j] > dp[i][j-1] {
+                i -= 1
+            } else {
+                j -= 1
+            }
+        }
+
+        return String(resultArr)
+    }
 }

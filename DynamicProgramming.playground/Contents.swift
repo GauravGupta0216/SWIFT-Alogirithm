@@ -110,6 +110,7 @@ let lcs = LongestCommonSubsequence(s1, s2)
 print(lcs.getLCSViaRecursion())     //Print 5 - bcdgh
 print(lcs.getLCSViaMemoization())   //Print 5
 print(lcs.getLCSViaTopDown())       //Print 5
+print(lcs.getLCSString())
 
 /// Longest Common Substring
 print(LongestCommonSubstring(s1, s2).calculate()) //print 3 - bcd
