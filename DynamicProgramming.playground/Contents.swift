@@ -130,3 +130,11 @@ print(LongestPalindromicSubsequence(s1).getLength()) // Print 5 - ABCBA
 /// Longest Repeating Subsequence
 s1 = "axxzxy"
 print(LongestRepeatingSubsequence(s1).getLRS())
+
+
+///Matrix Chain Multiplication
+input = [40, 20, 30, 10, 30]
+print(MatrixChainMultiplication(input).minimumCost()) //26000
+
+input = [1, 2, 3, 4, 3]
+print(MatrixChainMultiplication(input).minimumCost()) //30
