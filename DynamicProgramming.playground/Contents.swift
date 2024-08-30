@@ -142,3 +142,8 @@ input = [1, 2, 3, 4, 3]
 print(MatrixChainMultiplication(input).minimumCost()) //30
 print(MatrixChainMultiplication(input).minimumCost2())
 print(MatrixChainMultiplication(input).minimumCost3())
+
+
+/// Palindrome Partition
+s1 = "abcb"
+print(PalindromePartition(s1).getMinPartition())
