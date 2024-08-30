@@ -7,7 +7,7 @@ public struct MatrixChainMultiplication {
         self.input = input
     }
     
-    //Recursion
+    ///Recursion
     public func minimumCost() -> Int {
         return solve(input, i: 1, j: input.count-1)
     }
@@ -25,7 +25,7 @@ public struct MatrixChainMultiplication {
         return minValue
     }
     
-    //Memoization - Bottom-up DP
+    ///Memoization - Bottom-up DP
     public func minimumCost2() -> Int {
         let n = input.count
         var dp = Array(repeating: [Int](repeating: -1, count: n+1), count: n+1)
@@ -48,6 +48,26 @@ public struct MatrixChainMultiplication {
         }
         dp[i][j] = minValue
         return minValue
+    }
+    
+    ///DP Tabulation
+    public func minimumCost3() -> Int {
+        let n = input.count
+        var dp = Array(repeating: [Int](repeating: 0, count: n), count: n)
+        
+        //length is the chain length
+        for length in 2..<n {
+            for i in 0..<n-length {
+                let j = i+length
+                dp[i][j] = Int.max
+                
+                for k in i+1..<j {
+                    let tempCost = dp[i][k] + dp[k][j] + input[i]*input[k]*input[j]
+                    dp[i][j] = min(dp[i][j], tempCost)
+                }
+            }
+        }
+        return dp[0][n-1]
     }
     
 }
