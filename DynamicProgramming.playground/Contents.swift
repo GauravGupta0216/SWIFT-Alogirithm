@@ -145,5 +145,6 @@ print(MatrixChainMultiplication(input).minimumCost3())
 
 
 /// Palindrome Partition
-s1 = "abcb"
+s1 = "nitik"
 print(PalindromePartition(s1).getMinPartition())
+print(PalindromePartition(s1).getMinPartition2())

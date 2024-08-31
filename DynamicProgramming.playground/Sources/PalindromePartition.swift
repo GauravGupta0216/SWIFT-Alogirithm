@@ -13,7 +13,7 @@ public struct PalindromePartition {
         self.str = Array(str)
     }
     
-    ///Recursion
+    //Recursion
     public func getMinPartition() -> Int {
         return solveViaRecursion(i: 0, j: str.count-1)
     }
@@ -33,6 +33,31 @@ public struct PalindromePartition {
         return minPartition
     }
 
+    //Memoization
+    public func getMinPartition2() -> Int {
+        let n = str.count
+        var dp = Array(repeating: [Int](repeating: -1, count: n+1), count: n+1)
+        
+        return minPartitionMemoization(&dp, i: 0, j: n-1)
+    }
+    
+    func minPartitionMemoization(_ dp: inout [[Int]], i: Int, j: Int) -> Int {
+        if dp[i][j] != -1 {
+            return dp[i][j]
+        }
+        if i >= j || isPalindrome(i, j) {
+            return 0
+        }
+
+        var minVal = Int.max
+        for k in i..<j {
+            let tempVal = 1 + minPartitionMemoization(&dp, i: 0, j: k) + minPartitionMemoization(&dp, i: k+1, j: j)
+            minVal = min(minVal, tempVal)
+        }
+        dp[i][j] = minVal
+        return minVal
+    }
+    
     func isPalindrome(_ i: Int, _ j: Int) -> Bool {
         var x = i
         var y = j
