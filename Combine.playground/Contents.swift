@@ -3,4 +3,5 @@ import Foundation
 
 // Running examples
 
-CombineLatest().perform()
+CombineLatestExample().perform()
+ZipOperatorExample().perform()

@@ -15,7 +15,7 @@ import Combine
  
 */
 
-public class CombineLatest {
+public class CombineLatestExample {
     var anyCancellable = Set<AnyCancellable>()
     public init() {}
     
