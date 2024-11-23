@@ -148,3 +148,7 @@ print(MatrixChainMultiplication(input).minimumCost3())
 s1 = "nitik"
 print(PalindromePartition(s1).getMinPartition())
 print(PalindromePartition(s1).getMinPartition2())
+
+Array(s1.unicodeScalars).forEach { value in
+    print(value.value)
+}
