@@ -24,7 +24,7 @@ public class ZipOperatorExample {
             .sink{value in print(value)}
             .store(in: &anyCancellable)
         
-        print("running zip operator example")
+        print("\nrunning zip operator example")
         publisher1.send(1)
         publisher2.send("Hello")
         publisher1.send(2)

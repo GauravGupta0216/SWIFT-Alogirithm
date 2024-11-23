@@ -5,3 +5,5 @@ import Foundation
 
 CombineLatestExample().perform()
 ZipOperatorExample().perform()
+SubjectsExample().showPassThroughSubject()
+SubjectsExample().showCurrentValueSubject()
